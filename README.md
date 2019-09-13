@@ -1,5 +1,7 @@
 # reason-i18n-extractor
 
+[![Build Status](https://dev.azure.com/mlbli/reason-i18n-extractor/_apis/build/status/bloodyowl.reason-i18n-extractor?branchName=master)](https://dev.azure.com/mlbli/reason-i18n-extractor/_build/latest?definitionId=5&branchName=master)
+
 Extract translations from your ReasonML codebase.
 
 ## Installation
