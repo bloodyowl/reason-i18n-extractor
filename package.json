@@ -8,7 +8,7 @@
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "bin": [
-        "Upgrade"
+        "reason-i18n-extractor"
       ]
     },
     "install": [

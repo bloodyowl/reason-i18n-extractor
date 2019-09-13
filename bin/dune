@@ -1,5 +1,5 @@
 (executable
   (package reason-i18n-extractor)
   (name Translate)
-  (public_name Translate)
+  (public_name reason-i18n-extractor)
   (libraries lib))

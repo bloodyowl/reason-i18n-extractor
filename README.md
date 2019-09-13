@@ -32,7 +32,7 @@ This pairs nicely with [`i18n-webpack-plugin`](https://github.com/webpack-contri
 You feed the list of files you have translations in to the script's sdtin, and pass as first argument the destination of the JSON file you want to store the translations in.
 
 ```console
-$ find ./src -iname '*.re' | reason-write-translations ./i18n/fr.json
+$ find ./src -iname '*.re' | reason-i18n-extractor ./i18n/fr.json
 ```
 
 Let's say your codebase contains the following code:
