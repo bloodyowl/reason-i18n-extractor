@@ -1,6 +1,6 @@
 {
   "name": "reason-i18n-extractor",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Extract translations from your Reason",
   "license": "MIT",
   "esy": {
