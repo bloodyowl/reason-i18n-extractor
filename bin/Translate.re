@@ -17,12 +17,17 @@ let readStdin = () => {
 
 switch (Sys.argv) {
 | [|_, "--help"|] =>
-  Console.log(<Pastel color=Blue> "Reason i18n extractor" </Pastel>);
+  Console.log(<Pastel color=Blue> "Reason i18n Extractor" </Pastel>);
   Console.log(
     "Finds occurences of `T.__(translation)` in the list of files you feed in stdin",
   );
   Console.log(
-    "Usage: find src/**/*.re | write-translations path/to/translations.json",
+    <Pastel>
+      "Usage: "
+      <Pastel color=Blue>
+        "find src/**/*.re | reason-i18n-extractor path/to/translations.json"
+      </Pastel>
+    </Pastel>,
   );
 | [|_, destinationFile|] =>
   Lib.Translations.translate(
