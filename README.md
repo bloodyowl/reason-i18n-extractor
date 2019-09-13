@@ -16,7 +16,7 @@ $ yarn add reason-i18n-extractor
 
 This binary assumes that your translations are using a `T.__` function to identify translations.
 
-```reasonml
+```reason
 let element = <div> {T.__("My translation")->React.string} </div>;
 ```
 
@@ -37,7 +37,7 @@ $ find ./src -iname '*.re' | reason-i18n-extractor ./i18n/fr.json
 
 Let's say your codebase contains the following code:
 
-```reasonml
+```reason
 let x = <div> {T.__("My translation")->React.string} </div>;
 let y = <div> {T.__("My translation 2")->React.string} </div>;
 ```
