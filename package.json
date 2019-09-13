@@ -28,6 +28,7 @@
     "@reason-native/pastel": "*",
     "@reason-native/rely": "*",
     "ocaml": "~4.6.0",
+    "yojson": "~1.7.0",
     "refmterr": "*"
   },
   "devDependencies": {
