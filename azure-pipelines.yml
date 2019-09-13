@@ -38,6 +38,7 @@ jobs:
       - Linux
       - macOS
       - Windows
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/tags/*'))
     pool:
       vmImage: macOS-10.13
       demands: node.js
