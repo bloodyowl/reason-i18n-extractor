@@ -1,0 +1,24 @@
+;; dune file
+(library
+   (name MyLibTest)
+   (public_name reason-i18n-extractor-tests.lib)
+   ; the linkall flag ensures that all of our tests are compiled and the
+   ; -g flag emits debugging information
+   (ocamlopt_flags -linkall -g)
+   (flags (-w -3-9))
+   ; you will want to depend on the library you are testing as well, however for
+   ; the purposes of this example we are only depending on the test runner itself
+   (libraries rely.lib console.lib reason-i18n-extractor.lib)
+   (modules (:standard \ RunTests))
+)
+(executable
+  ; the for the library is automatically detected because of the name, but we
+  ; need to explicitly specify the package here
+  (package reason-i18n-extractor-tests)
+  (name RunTests)
+  (public_name RunTests.exe)
+  (libraries
+    reason-i18n-extractor-tests.lib
+  )
+  (modules RunTests)
+)

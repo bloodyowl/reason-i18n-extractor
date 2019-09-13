@@ -1,0 +1,5 @@
+(library
+  (name lib)
+  (flags (-w -40 -w +26))
+  (public_name reason-i18n-extractor.lib)
+  (libraries reason console.lib pastel.lib yojson))
