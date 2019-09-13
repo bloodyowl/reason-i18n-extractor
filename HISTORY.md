@@ -1,3 +1,9 @@
+## 2.0.2
+
+Fixes:
+
+- Fixed README (ae1367f)
+
 ## 2.0.1
 
 Fixes:
