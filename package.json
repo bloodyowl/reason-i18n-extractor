@@ -1,6 +1,6 @@
 {
   "name": "reason-i18n-extractor",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Extract translations from your Reason",
   "license": "MIT",
   "esy": {
@@ -21,9 +21,9 @@
     "doc": "esy dune build @doc"
   },
   "dependencies": {
-    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "@esy-ocaml/reason": "^3.5.2",
     "@opam/dune": "^1.9.3",
-    "@opam/reason": ">= 3.4.0 < 3.5.0",
+    "@opam/reason": "^3.5.2",
     "@opam/yojson": "~1.7.0",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
@@ -35,5 +35,9 @@
     "@opam/merlin": "*",
     "@opam/odoc": "*",
     "ocaml": "~4.6.0"
+  },
+  "resolutions": {
+    "@opam/reason": "facebook/reason#ede1f25c895ac9c6a93f7d3c87a19eaa8de366f0",
+    "@esy-ocaml/reason": "facebook/reason#ede1f25c895ac9c6a93f7d3c87a19eaa8de366f0"
   }
 }

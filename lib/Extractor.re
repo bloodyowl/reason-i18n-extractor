@@ -43,9 +43,5 @@ let get = fileContents => {
     fileContents |> Reason_toolchain.RE.implementation_with_comments;
   let (ast, _) = astAndComments;
   mapper.structure(mapper, ast) |> ignore;
-  Reason_toolchain.RE.print_implementation_with_comments(
-    Format.str_formatter,
-    astAndComments,
-  );
   translations.contents;
 };
