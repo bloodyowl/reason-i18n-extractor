@@ -75,30 +75,6 @@ function arch() {
   }
 
   /**
-   * On Windows, the most reliable way to detect a 64-bit OS from within a 32-bit
-   * app is based on the presence of a WOW64 file: %SystemRoot%\SysNative.
-   * See: https://twitter.com/feross/status/776949077208510464
-   */
-  if (process.platform === "win32") {
-    var useEnv = false;
-    try {
-      useEnv = !!(
-        process.env.SYSTEMROOT && fs.statSync(process.env.SYSTEMROOT)
-      );
-    } catch (err) {}
-
-    var sysRoot = useEnv ? process.env.SYSTEMROOT : "C:\\Windows";
-
-    // If %SystemRoot%\SysNative exists, we are in a WOW64 FS Redirected application.
-    var isWOW64 = false;
-    try {
-      isWOW64 = !!fs.statSync(path.join(sysRoot, "sysnative"));
-    } catch (err) {}
-
-    return isWOW64 ? "x64" : "x86";
-  }
-
-  /**
    * On Linux, use the `getconf` command to get the architecture.
    */
   if (process.platform === "linux") {
@@ -156,14 +132,6 @@ try {
 }
 
 switch (platform) {
-  case "win32":
-    if (arch() !== "x64") {
-      console.warn("error: x86 is currently not supported on Windows");
-      process.exit(1);
-    }
-
-    copyPlatformBinaries("windows-x64");
-    break;
   case "linux":
   case "darwin":
     copyPlatformBinaries(platform);

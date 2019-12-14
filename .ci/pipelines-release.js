@@ -23,7 +23,7 @@ const packageJson = JSON.stringify(
       "esyInstallRelease.js",
       "platform-linux/",
       "platform-darwin/",
-      "platform-windows-x64/"
+      // "platform-windows-x64/"
     ]
   },
   null,
