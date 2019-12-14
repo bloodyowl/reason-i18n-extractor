@@ -5,8 +5,7 @@
   "license": "MIT",
   "esy": {
     "build": [
-      "refmterr dune build --root . --only-packages #{self.name}",
-      "refmterr dune build --root . --only-packages #{self.name}-tests"
+      "refmterr dune build --root . --only-packages #{self.name}"
     ],
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
