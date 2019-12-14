@@ -28,7 +28,7 @@ jobs:
       - script: "esy build"
         displayName: "esy build"
       - template: utils/create-docs.yml
-      - script: "esy test"
+      - script: "REASON_NATIVE_ROOT=. esy test"
         displayName: "Test command"
       - script: "esy release"
         displayName: "esy release"

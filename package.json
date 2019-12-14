@@ -4,7 +4,10 @@
   "description": "Extract translations from your Reason",
   "license": "MIT",
   "esy": {
-    "build": "refmterr dune build",
+    "build": [
+      "refmterr dune build --root . --only-packages #{self.name}",
+      "refmterr dune build --root . --only-packages #{self.name}-tests"
+    ],
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "bin": [
@@ -14,10 +17,15 @@
     "install": [
       "esy-installer reason-i18n-extractor.install",
       "esy-installer reason-i18n-extractor-tests.install"
-    ]
+    ],
+    "exportedEnv": {
+      "REASON_NATIVE_ROOT": {
+        "val": "#{self.root}"
+      }
+    }
   },
   "scripts": {
-    "test": "esy x RunTests.exe",
+    "test": "esy dune exec RunTests.exe",
     "doc": "esy dune build @doc"
   },
   "dependencies": {
