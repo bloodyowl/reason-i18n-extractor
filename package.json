@@ -1,6 +1,6 @@
 {
   "name": "reason-i18n-extractor",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Extract translations from your Reason",
   "license": "MIT",
   "esy": {
@@ -24,9 +24,9 @@
     "doc": "esy dune build @doc"
   },
   "dependencies": {
-    "@esy-ocaml/reason": "3.5.2",
+    "@esy-ocaml/reason": "3.6.0",
     "@opam/dune": "^1.9.3",
-    "@opam/reason": "3.5.2",
+    "@opam/reason": "3.6.0",
     "@opam/yojson": "~1.7.0",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
