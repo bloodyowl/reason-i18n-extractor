@@ -1,3 +1,15 @@
+## 5.0.0
+
+Changes:
+
+- Upgrade Reason
+
+## 3.0.0
+
+Changes:
+
+- Stop building on windows due to CI bug
+
 ## 2.0.2
 
 Fixes:
