@@ -1,5 +1,5 @@
 open Reason_parser;
-open Migrate_parsetree.Ast_404;
+open Migrate_parsetree.Ast_408;
 open Ast_helper;
 open Ast_mapper;
 open Asttypes;
